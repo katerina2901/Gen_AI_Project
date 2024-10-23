@@ -1,6 +1,6 @@
 # Overview
-This is the repository of LLaVa-NeXT(original repo: https://github.com/LLaVA-VL/LLaVA-NeXT) fine tuning (with QLoRA (https://github.com/artidoro/qlora) or LoRA (https://arxiv.org/abs/2106.09685)) for detailed summary generation.
-I used only "mixkit"-22.2G, and "pexels"-14.3G part of Dataset (cut for approximately 10G total), because Full dataset is 40k videos.
+This is the repository of `LLaVa-NeXT`(original repo: https://github.com/LLaVA-VL/LLaVA-NeXT) fine tuning (with `QLoRA` (https://github.com/artidoro/qlora) or `LoRA` (https://arxiv.org/abs/2106.09685)) for detailed summary generation.
+I used only "mixkit"-22.2G, and "pexels"-14.3G part of Dataset (cut for approximately 10G total), because full dataset has 40k videos.
 
 
 # Project Organization
@@ -35,7 +35,7 @@ Project
 ```
 
 # Description of Project
-The Idea is to fine tune LLaVa for generating the described summaries and for that ShareGPT4Video dataset was used (https://sharegpt4video.github.io/)
+The Idea is to fine tune `LLaVa` for generating the described summaries and for that `ShareGPT4Video` dataset was used (https://sharegpt4video.github.io/)
 
 
 # How to run
@@ -64,8 +64,8 @@ After fine tuning model will be pushed to the hub
 
 
 # Resulting model
-After fine tuning with QLoRA and some hyperparameter tuning model is pretty good with generation of detailed summaries for even custom videos.
-Final model with adapters can be found in huggingface: https://huggingface.co/sm47466863/LLaVa-NeXT-Video-GENAI-FT-Project
+After fine tuning with `QLoRA` and some hyperparameter tuning model is pretty good with generation of detailed summaries for even custom videos.
+Final model with adapters can be found in `huggingface hub`: https://huggingface.co/sm47466863/LLaVa-NeXT-Video-GENAI-FT-Project
 Or can be loaded directly:
 ```Python
 # Load model directly
@@ -73,6 +73,8 @@ from transformers import AutoModel
 model = AutoModel.from_pretrained("sm47466863/LLaVa-NeXT-Video-GENAI-FT-Project")
 ```
 
+# Resources, weights, hyperparameters
+I used Nvidia A100 with 80G RAM with ability to use `fp16` arithmetics, `batch_size=16`, `lora_rank=16`, `adamw_bnb_8bit` as optimizer with `warmup_ratio=0.1`, started `learning_rate = 2e-05` with `lr_scheduler_type = 'cosine'` for smooth and good convergence.
 
 # Results
 
