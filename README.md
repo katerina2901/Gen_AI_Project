@@ -75,7 +75,7 @@ model = AutoModel.from_pretrained("sm47466863/LLaVa-NeXT-Video-GENAI-FT-Project"
 
 
 # Results
-
+---
 ![Example 1](./results/test_video.gif)
 
 **Caption vanilla**
@@ -83,6 +83,7 @@ model = AutoModel.from_pretrained("sm47466863/LLaVa-NeXT-Video-GENAI-FT-Project"
 
 **Caption FT**
 ```USER:  <video> \nProvide a summary for this video. ASSISTANT: The video showcases a man and a woman engaged in a casual conversation, specifically discussing elements related to a product or topic of interest, facilitated by a laptop placed on a table, with the man using a microphone. The setup appears to be a typical recording or production studio setup, featuring sound equipment such as microphones and a laptop connected to headphones, which is being used to control the recording process. The man wears a hat, likely representing his persona or style, and he speaks in an animated and engaged manner, suggesting enthusiasm for the discussion. The woman responds to his conversation, offering her perspectives or questions.\n\nBetween moments of engagement, both individuals appear to be checking their phone discreetly, possibly indicating a pause in the conversation or a change in the discussion. As the video progresses, the man continues to engage with the woman, sharing more information or insights relevant to the topic at hand, and she listens attentively. The man remains seated throughout the conversation, while the woman may appear to be reclining or relaxed.\n```
+---
 
 ![Example 2](./results/test_video_2.gif)
 
@@ -92,8 +93,8 @@ model = AutoModel.from_pretrained("sm47466863/LLaVa-NeXT-Video-GENAI-FT-Project"
 **Caption FT**
 ```USER:  <video> \nProvide a summary for this video. ASSISTANT: The video captures a scene of a person working on a laptop in an office-like setting, with the focus on the task of writing or typing on a document, followed by a transition to a different document on the same screen. A series of close-up shots and long views of the laptop and the individual's movements are shown as the person interacts with the device. These include typing or writing text, adjusting the screen angle, and occasional glimpses of the person's face and the surrounding environment. The sequence of actions appears to emphasize the individual's interaction with technology and their engagement with the digital space, highlighting the process of composing or editing text, reflecting a commonplace work environment likely involving tasks such as drafting, revising, or data entry. Throughout, the surroundings remain consistent, suggesting no significant variation or change in setting, but the specific activity or details on the screen suggest a progression of work.```
 
-
-![Example 3](./results/test_video.gif)
+---
+![Example 3](./results/test_video_3.gif)
 
 **Caption vanilla**
 ```USER:  <video> \nProvide a summary for this video. ASSISTANT: This video features a musical performance in a subway setting. The musicians are playing instruments in a subway station, creating a unique and intimate atmosphere. The performers are arranged on the platform area, inviting the audience to join them or simply provide a serene musical interlude for subway passengers. One person plays a violin, captivating and delicate in its sound, while another plays the cello, adding a deep, resonant base to the musical progression. Their playing captures the passersby and subway passengers, filling their trip with moments of harmony and expression. The musicians share smiles and interactions with their audience, engaging both individuals in their performance and the environment. The station platform becomes their stage, offering a public space for music-loving travelers to enjoy and share a musical moment.```
